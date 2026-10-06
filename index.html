@@ -254,13 +254,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 
 /* Commercial as a magazine: cover, numbered spreads, a process "colophon", live bands, closing page. */
 .mag{padding:0}
-.mag .cover{position:relative;height:calc(100svh - 70px);min-height:600px;max-height:1000px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;color:#fff}
+.mag .cover{position:relative;height:calc(100svh - 70px);min-height:600px;max-height:1000px;display:grid;grid-template-columns:1fr;overflow:hidden;color:#fff}
 .mag .cover img{width:100%;height:100%;object-fit:cover;display:block}
 .mag .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.05) 32%,rgba(0,0,0,.05) 62%,rgba(0,0,0,.55))}
 .mast,.mfoot{position:absolute;z-index:2;left:clamp(16px,4vw,48px);right:clamp(16px,4vw,48px);display:flex;justify-content:space-between;gap:16px;font:500 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;padding-block:14px}
 .mast{top:18px;border-bottom:1px solid rgba(255,255,255,.55)}
 .mfoot{bottom:18px;border-top:1px solid rgba(255,255,255,.55)}
 .mfoot a{color:inherit;text-decoration:none}.mfoot a:hover{color:#d6a952}
+
+.cover img{object-position:50% 40%}
+.cover .blurb{text-shadow:0 1px 14px rgba(0,0,0,.65)}
+.cover .ring{position:absolute;z-index:2;top:50%;right:clamp(16px,6vw,96px);translate:0 -50%}
 .big{position:absolute;z-index:2;margin:0;font:700 clamp(44px,8vw,128px)/.86 var(--sans);letter-spacing:-.045em;text-transform:uppercase;color:#fff}
 .big.t{top:76px;left:calc(clamp(16px,4vw,48px) - .04em)}
 .big.b{bottom:70px;right:clamp(16px,4vw,48px);text-align:right}
@@ -275,7 +279,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .spread p{margin:0;max-width:44em;font:500 15px/1.5 var(--sans);letter-spacing:.02em;text-transform:uppercase}
 .spread ul{list-style:none;padding:0;margin:26px 0 0;columns:2;column-gap:clamp(24px,4vw,64px);font:400 12px/2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--night-muted)}
 .spread li::before{content:"/ "}
-.spread .pair.mix{grid-template-columns:3fr 2fr 2fr 3fr}.spread .pair.mix img{aspect-ratio:3/2;object-position:50% 50%}.spread .pair.mix img:nth-child(2),.spread .pair.mix img:nth-child(3){aspect-ratio:1;object-position:50% 60%}
+.spread .pair.four{grid-template-columns:repeat(4,1fr)}.spread .pair.four img{aspect-ratio:3/4}.spread .pair.mix{grid-template-columns:3fr 2fr 2fr 3fr}.spread .pair.mix img{aspect-ratio:3/2;object-position:50% 50%}.spread .pair.mix img:nth-child(2),.spread .pair.mix img:nth-child(3){aspect-ratio:1;object-position:50% 60%}
 
 
 .spread.solo{border-top:1px solid var(--night-line)}
@@ -304,12 +308,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .closing h2{font:400 clamp(64px,10vw,150px)/.86 var(--serif);color:#d6a952;margin:0 0 34px;max-width:7em}
 .closing p{margin:0;max-width:34em;font:500 15px/1.55 var(--sans);letter-spacing:.02em;text-transform:uppercase;color:#f1d9a2}
 @media (max-width:760px){
- .mag .cover{grid-template-columns:1fr;height:calc(100svh - 64px)}.mag .cover img+img{display:none}
+ .mag .cover{grid-template-columns:1fr;height:calc(100svh - 64px)}.mag .cover img+img{display:none}.cover .ring{width:118px;top:auto;bottom:150px;translate:none}
  .big{font-size:13vw}.big.t{top:64px}.big.b{bottom:62px}
- .blurb.r{top:calc(84px + 13vw*1.9);left:clamp(16px,4vw,48px);right:auto}.blurb.l{display:none}
+ .blurb.r{top:calc(84px + 13vw*1.9);left:clamp(16px,4vw,48px);right:auto}.blurb.l{display:none}.cover .blurb.r{top:auto;bottom:160px;max-width:14em}
  .mast span+span,.mfoot span{display:none}
  .spread .txt{grid-template-columns:1fr}.spread .pair img{aspect-ratio:3/4}
- .spread .pair.mix{grid-template-columns:1fr 1fr}.spread .pair.mix img{aspect-ratio:1}
+ .spread .pair.four{grid-template-columns:1fr 1fr}.spread .pair.mix{grid-template-columns:1fr 1fr}.spread .pair.mix img{aspect-ratio:1}
  .spread ul{columns:1}
 }
 
@@ -433,8 +437,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 
   <section id="commercial" class="night mag" data-side="commercial">
     <div class="cover">
-      <img src="img/blazer.jpg" alt="Woman in an emerald blazer framed by swirling motion">
-      <img src="img/trench.jpg" alt="Woman with freckles holding the collar of a cream trench coat in warm light">
+      <img src="img/stagewide.jpg" alt="Band on an amber-lit stage seen from the balcony over the crowd">
+      <div class="ring" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text font-family="IBM Plex Mono, monospace" font-size="13.5" letter-spacing="4.2" fill="currentColor"><textPath href="#circ">PHOTO · FILM · PRODUCTION · DENVER · </textPath></text></svg><b>MP</b></div>
       <div class="mast"><span>Marie Perry Studio · Commercial</span><span>Issue Nº 01 · Denver</span></div>
       <h2 class="big t">Your brand,</h2>
       <p class="blurb r">I'm a creative producer: one partner for your whole visual story, from the concept and the shoot to the edit, website imagery, podcast episodes and content that keeps coming every month.</p>
@@ -442,7 +446,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <div class="mfoot"><span>Creative producer</span><a href="#contact">Start a project →</a></div>
     </div>
     <article class="spread">
-      <div class="pair"><img src="img/redchair.jpg" alt="Woman in a white tee and jeans on a red chair in a bright cafe" loading="lazy"><img src="img/bwman.jpg" alt="Black and white portrait of a man in glasses" loading="lazy"></div>
+      <div class="pair four"><img src="img/blazer.jpg" alt="Woman in an emerald blazer framed by swirling motion" loading="lazy"><img src="img/bwman.jpg" alt="Black and white portrait of a man in glasses" loading="lazy"><img src="img/redchair.jpg" alt="Woman in a white tee and jeans on a red chair in a bright cafe" loading="lazy"><img src="img/trench.jpg" alt="Woman with freckles holding the collar of a cream trench coat in warm light" loading="lazy"></div>
       <div class="wrap txt"><span class="no">[01]</span><div><h3>Brand photo &amp; video</h3><p>Campaigns and portraits that show who is behind the brand, filmed and photographed in one production day.</p><ul><li>Campaigns</li><li>Artist promo</li><li>Team portraits</li><li>Product &amp; content</li><li>Short films</li><li>Drone footage</li></ul></div></div>
     </article>
     <article class="spread">
@@ -468,8 +472,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     </div>
     <div class="bands" id="live">
       <div class="band low"><img style="object-position:50% 4%" src="img/violin.jpg" alt="Singer with a violin performing under violet light" loading="lazy"><h3>Concerts &amp; artists</h3></div>
-      <div class="band"><img src="img/stagewide.jpg" alt="Band on an amber-lit stage seen from the balcony over the crowd" loading="lazy">
-        <div class="ring" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text font-family="IBM Plex Mono, monospace" font-size="13.5" letter-spacing="4.2" fill="currentColor"><textPath href="#circ">LIVE · ON STAGE · LIVE · ON STAGE · </textPath></text></svg><b>MP</b></div></div>
       <div class="band"><img src="img/crowd.jpg" alt="Audience raising phone lights in a dark concert hall" loading="lazy"><h3>Fast for press &amp; social</h3></div>
     </div>
     <div class="livefilm"><div class="film">
