@@ -279,7 +279,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .spread p{margin:0;max-width:44em;font:500 15px/1.5 var(--sans);letter-spacing:.02em;text-transform:uppercase}
 .spread ul{list-style:none;padding:0;margin:26px 0 0;columns:2;column-gap:clamp(24px,4vw,64px);font:400 12px/2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--night-muted)}
 .spread li::before{content:"/ "}
-.spread .pair.four{grid-template-columns:repeat(4,1fr)}.spread .pair.four img{aspect-ratio:3/4}.spread .pair.mix{grid-template-columns:3fr 2fr 2fr 3fr}.spread .pair.mix img{aspect-ratio:3/2;object-position:50% 50%}.spread .pair.mix img:nth-child(2),.spread .pair.mix img:nth-child(3){aspect-ratio:1;object-position:50% 60%}
+.spread .pair.four{grid-template-columns:repeat(4,1fr)}.spread .pair.four img{aspect-ratio:3/4}.spread .pair.mix{grid-template-columns:3fr 2fr 2fr 2fr 3fr}.spread .pair.mix img{aspect-ratio:3/2;object-position:50% 50%}.spread .pair.mix img:nth-child(n+2):nth-child(-n+4){aspect-ratio:1;object-position:50% 60%}.spread .pair.mix img:nth-child(2){object-position:50% 8%}
 
 
 .spread.solo{border-top:1px solid var(--night-line)}
@@ -313,7 +313,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
  .blurb.r{top:calc(84px + 13vw*1.9);left:clamp(16px,4vw,48px);right:auto}.blurb.l{display:none}.cover .blurb.r{top:auto;bottom:160px;max-width:14em}
  .mast span+span,.mfoot span{display:none}
  .spread .txt{grid-template-columns:1fr}.spread .pair img{aspect-ratio:3/4}
- .spread .pair.four{grid-template-columns:1fr 1fr}.spread .pair.mix{grid-template-columns:1fr 1fr}.spread .pair.mix img{aspect-ratio:1}
+ .spread .pair.four{grid-template-columns:1fr 1fr}.spread .pair.mix{grid-template-columns:1fr 1fr}.spread .pair.mix img{aspect-ratio:1}.spread .pair.mix img:first-child{grid-column:1/-1;aspect-ratio:3/2}
  .spread ul{columns:1}
 }
 
@@ -462,7 +462,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <div class="wrap txt"><span class="no">[04]</span><div><h3>Content &amp; podcasts</h3><p>Monthly photo and video for your site and social channels, plus podcast production from format and recording to a finished episode.</p><ul><li>Monthly photo</li><li>Monthly video</li><li>Content calendar</li><li>Podcast format</li><li>Recording</li><li>Episode edit</li></ul></div></div>
     </article>
     <article class="spread">
-      <div class="pair mix"><img src="img/interior-lounge.jpg" alt="Bright lounge with a black leather sofa and two yellow armchairs" loading="lazy"><img src="img/food-sorbet.jpg" alt="Lemon sorbet in a ribbed bowl beside a jar of lemonade" loading="lazy"><img src="img/food-steak.jpg" alt="Raw ribeye steak on dark marble with asparagus, tomatoes and olive oil" loading="lazy"><img src="img/interior-dining.jpg" alt="Open dining hall with pale wood tables, pendant lights and framed photos" loading="lazy"></div>
+      <div class="pair mix"><img src="img/interior-lounge.jpg" alt="Bright lounge with a black leather sofa and two yellow armchairs" loading="lazy"><img src="img/realtor.jpg" alt="Real estate agent with short red hair in a black blazer, chin resting on her hand" loading="lazy"><img src="img/food-sorbet.jpg" alt="Lemon sorbet in a ribbed bowl beside a jar of lemonade" loading="lazy"><img src="img/food-steak.jpg" alt="Raw ribeye steak on dark marble with asparagus, tomatoes and olive oil" loading="lazy"><img src="img/interior-dining.jpg" alt="Open dining hall with pale wood tables, pendant lights and framed photos" loading="lazy"></div>
       <div class="wrap txt"><span class="no">[05]</span><div><span class="kicker">For local business</span><h3>Real estate &amp; restaurants</h3><p>Spaces and dishes photographed so people want to step inside: bright interiors and walkthrough tours for listings, menus and styled food for restaurants, plus personal reels for agents, chefs and owners on Instagram and YouTube.</p><ul><li>Listings &amp; interiors</li><li>Menu &amp; food styling</li><li>Agent, chef &amp; team portraits</li><li>Reels &amp; walkthrough video</li><li>Drone exteriors</li><li>Monthly content</li></ul></div></div>
     </article>
     <div class="colophon">
