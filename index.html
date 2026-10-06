@@ -292,7 +292,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .colophon p{max-width:58em;margin:0 auto;font:400 13px/1.9 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--night-ink)}
 .seal{display:inline-block;margin-top:40px;padding:.55em 1.3em;border:1px solid var(--night-ink);border-radius:50%;font:400 17px/1 var(--serif)}
 .bands .band{position:relative;height:clamp(240px,34vw,500px);overflow:hidden;display:grid;place-items:center}
-.bands .band.low{place-items:end center;padding-bottom:clamp(24px,3.5vw,52px)}
+.bands .band.low{height:clamp(320px,42vw,680px);place-items:end end;padding:0 clamp(16px,4vw,48px) clamp(24px,3.5vw,52px)}.bands .band.low h3{text-align:right}
 .bands .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .bands .band::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28)}
 .bands h3{position:relative;z-index:1;margin:0;padding:0 16px;text-align:center;font:400 clamp(34px,5.6vw,80px)/1 var(--serif);letter-spacing:.03em;text-transform:uppercase;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.35)}
@@ -306,7 +306,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .closing > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .closing::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.25) 70%)}
 .closing .inner{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:110px clamp(16px,4vw,48px)}
-.closing h2{font:400 clamp(64px,10vw,150px)/.86 var(--serif);color:#d6a952;margin:0 0 34px;max-width:7em}
+.closing h2{font:400 clamp(64px,10vw,150px)/.86 var(--serif);color:#d6a952;margin:0 0 34px;max-width:5em}
 .closing p{margin:0;max-width:34em;font:500 15px/1.55 var(--sans);letter-spacing:.02em;text-transform:uppercase;color:#f1d9a2}
 @media (max-width:760px){
  .mag .cover{grid-template-columns:1fr;height:calc(100svh - 64px)}.mag .cover img+img{display:none}.cover .ring{width:118px;top:auto;bottom:150px;translate:none}
@@ -472,7 +472,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <span class="seal">Marie Perry</span>
     </div>
     <div class="bands" id="live">
-      <div class="band low"><img style="object-position:50% 4%" src="img/violin.jpg" alt="Singer with a violin performing under violet light" loading="lazy"><h3>Concerts &amp; artists</h3></div>
+      <div class="band low"><img style="object-position:50% 28%" src="img/violin.jpg" alt="Singer with a violin performing under violet light" loading="lazy"><h3>Concerts &amp; artists</h3></div>
       <div class="band"><img src="img/crowd.jpg" alt="Audience raising phone lights in a dark concert hall" loading="lazy"><h3>Fast for press &amp; social</h3></div>
     </div>
     <div class="livefilm"><div class="film">
@@ -486,7 +486,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       </div>
     </div>
     <div class="closing">
-      <img src="img/bass.jpg" alt="Bassist in blue haze on stage" loading="lazy">
+      <img src="img/bass.jpg" alt="Bassist in blue haze on stage" loading="lazy" style="object-position:50% 0%">
       <div class="mast"><span>@marieperry.studio</span><span>Commercial</span></div>
       <div class="inner"><h2>Let's make it yours.</h2><p>Small businesses can choose a ready-made package; larger projects are quoted individually after a short call. Tell me about your brand, and I'll build the whole production around it.</p></div>
       <div class="mfoot"><span>marieperry.art</span><a href="#contact">Start a project →</a></div>
