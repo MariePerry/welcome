@@ -272,6 +272,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .colophon p{max-width:58em;margin:0 auto;font:400 13px/1.9 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--night-ink)}
 .seal{display:inline-block;margin-top:40px;padding:.55em 1.3em;border:1px solid var(--night-ink);border-radius:50%;font:400 17px/1 var(--serif)}
 .bands .band{position:relative;height:clamp(240px,34vw,500px);overflow:hidden;display:grid;place-items:center}
+.bands .band.low{place-items:end center;padding-bottom:clamp(24px,3.5vw,52px)}
 .bands .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .bands .band::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28)}
 .bands h3{position:relative;z-index:1;margin:0;padding:0 16px;text-align:center;font:400 clamp(34px,5.6vw,80px)/1 var(--serif);letter-spacing:.03em;text-transform:uppercase;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.35)}
@@ -444,7 +445,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <span class="seal">Marie Perry</span>
     </div>
     <div class="bands" id="live">
-      <div class="band"><img src="img/violin.jpg" alt="Singer with a violin performing under violet light" loading="lazy"><h3>Concerts &amp; artists</h3></div>
+      <div class="band low"><img style="object-position:50% 4%" src="img/violin.jpg" alt="Singer with a violin performing under violet light" loading="lazy"><h3>Concerts &amp; artists</h3></div>
       <div class="band"><img src="img/stagewide.jpg" alt="Band on an amber-lit stage seen from the balcony over the crowd" loading="lazy">
         <div class="ring" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text font-family="IBM Plex Mono, monospace" font-size="13.5" letter-spacing="4.2" fill="currentColor"><textPath href="#circ">LIVE · ON STAGE · LIVE · ON STAGE · </textPath></text></svg><b>MP</b></div></div>
       <div class="band"><img src="img/crowd.jpg" alt="Audience raising phone lights in a dark concert hall" loading="lazy"><h3>Fast for press &amp; social</h3></div>
