@@ -185,7 +185,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 [data-view="portal"] [data-side]:not([data-side="portal"]){display:none!important}
 [data-view="personal"] [data-side="portal"],[data-view="personal"] [data-side="commercial"],
 [data-view="commercial"] [data-side="portal"],[data-view="commercial"] [data-side="personal"]{display:none!important}
-.portal{position:relative;display:grid;grid-template-columns:1fr 1fr;height:calc(100svh - 33px);min-height:520px;background:#0f0f11}
+.portal{position:relative;display:grid;grid-template-columns:1fr 1fr;height:100svh;min-height:520px;background:#0f0f11}
 .half{position:relative;overflow:hidden;display:block;color:#f4f1ea;text-decoration:none;min-width:0}
 .half img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .6s}
 .half::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.05) 35%,rgba(0,0,0,.15) 60%,rgba(0,0,0,.7));transition:background .6s}
@@ -199,7 +199,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .half:hover .enter .arr{translate:4px 0}.enter .arr{transition:translate .2s}
 .mark{position:absolute;z-index:2;top:clamp(28px,6vh,64px);left:0;right:0;text-align:center;color:#f4f1ea;pointer-events:none;display:grid;justify-items:center;gap:12px}
 .mark .name{font:400 clamp(44px,6.4vw,96px)/.9 var(--serif);letter-spacing:-.005em}
-.mark .studio{font:500 13.5px/1 var(--mono);letter-spacing:.5em;text-transform:uppercase;color:#d6a952;padding-left:.5em}
+.mark .name{text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.mark .studio{font:500 13.5px/1 var(--mono);letter-spacing:.5em;text-transform:uppercase;color:#f0c870;padding:.62em .8em .62em 1.3em;background:rgba(15,15,17,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(240,200,112,.35)}
 .where{position:absolute;z-index:2;left:0;right:0;bottom:12px;text-align:center;font:400 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(244,241,234,.6);pointer-events:none}
 @media (max-width:760px){.portal{grid-template-columns:1fr;grid-template-rows:1fr 1fr}.half + .half{border-left:0;border-top:1px solid rgba(244,241,234,.18)}
  .mark{top:22px}.cap{bottom:22px;gap:10px}.where{display:none}}
@@ -548,7 +549,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   </section>
 </main>
 
-<footer data-side="inner"><div class="wrap"><span>© 2026 Marie Perry Studio · Denver, Colorado</span><span>Personal · Commercial · Creative production</span><a href="https://www.instagram.com/marieperry.art/" target="_blank" rel="noopener">Instagram</a></div></footer>
+<footer><div class="wrap"><span>© 2026 Marie Perry Studio · Denver, Colorado</span><span>Personal · Commercial · Creative production</span><a href="https://www.instagram.com/marieperry.art/" target="_blank" rel="noopener">Instagram</a></div></footer>
 
 <script>
 const opts={personal:["A wedding","A love story session","Family, maternity, newborn or kids","A film of my event","Something else"],
