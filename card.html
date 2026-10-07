@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Marie Perry, creative producer in Denver: photo, film and production. Save my contact, call, write or see my work.">
+<meta property="og:title" content="Marie Perry · Studio">
+<meta property="og:description" content="Creative producer in Denver. Photo, film and production.">
+<meta property="og:image" content="https://marieperry.art/img/marie2.jpg">
+<meta property="og:url" content="https://marieperry.art/card">
+<meta name="theme-color" content="#1a1617">
+<link rel="icon" href="favicon.ico">
+<title>Marie Perry Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: the printed card's smoky front, stretched into one phone-sized column. Portrait inside the turning MP ring, then contact rows, then four doors into the portfolio. */
+:root{
+  --night:#1a1617; --smoke:#2a2426; --ink:#f1e7d3; --muted:#a59b8c; --line:rgba(241,231,211,.14);
+  --gold:#d6a952; --gold-deep:#b98a2e; --paper:#f4f1ec; --paper-ink:#1b1a1c;
+  --serif:"Instrument Serif","Cormorant Garamond","Times New Roman",Georgia,serif;
+  --sans:"Hanken Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--night)}
+body{margin:0;min-height:100vh;background:var(--night);color:var(--ink);font:300 16px/1.6 var(--sans);overflow-x:hidden;position:relative}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 70% 45% at 92% 4%,rgba(255,168,92,.30),transparent 70%),
+             radial-gradient(ellipse 60% 40% at 0% 100%,rgba(236,110,150,.13),transparent 70%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.13;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main{position:relative;z-index:2;max-width:440px;margin:0 auto;padding-inline:20px;padding-block:28px 40px;display:grid;gap:30px}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.label{font:500 10.5px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+
+.top{display:flex;justify-content:space-between;align-items:center}
+.lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:99px;padding:2px}
+.lang button{all:unset;cursor:pointer;font:500 10.5px/1 var(--mono);letter-spacing:.14em;padding:6px 10px;border-radius:99px;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--night)}
+
+.hero{display:grid;justify-items:center;text-align:center;gap:6px;position:relative}
+.streak{position:absolute;left:-20px;right:-20px;top:118px;height:1px;z-index:-1;
+  background:linear-gradient(90deg,rgba(255,206,150,0),rgba(255,206,150,.8) 30%,#fff1d8 48%,rgba(255,206,150,.5) 66%,rgba(255,206,150,0));
+  box-shadow:0 0 10px 1px rgba(255,170,90,.4)}
+.ring{position:relative;width:236px;aspect-ratio:1;margin-bottom:14px}
+.ring svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 48s linear infinite}
+.ring img{position:absolute;inset:34px;width:168px;height:168px;border-radius:50%;object-fit:cover;object-position:50% 20%;box-shadow:0 0 0 1px rgba(214,169,82,.45),0 18px 40px rgba(0,0,0,.45)}
+@keyframes spin{to{rotate:360deg}}
+@media (prefers-reduced-motion:reduce){.ring svg{animation:none}}
+h1{margin:0;font:400 58px/.9 var(--serif);letter-spacing:-.01em}
+.studio{font:500 11px/1 var(--mono);letter-spacing:.42em;color:var(--gold);padding-left:.42em}
+.motto{margin-top:12px;font:italic 400 21px/1.2 var(--serif);color:var(--muted)}
+.lead{max-width:32ch;font-size:15px;color:rgba(241,231,211,.82);margin:6px 0 0;text-wrap:balance}
+
+.save{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;border-radius:99px;background:var(--gold);color:var(--paper-ink);font:500 15px/1 var(--sans);letter-spacing:.02em;box-shadow:0 10px 30px rgba(214,169,82,.22)}
+.save:hover{background:#e2b964}
+.save svg{width:18px;height:18px}
+
+.rows{display:grid;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:76px minmax(0,1fr) auto;align-items:center;gap:10px;min-height:58px;border-bottom:1px solid var(--line)}
+.row a.v{font:400 16px/1.3 var(--sans);overflow-wrap:anywhere;padding-block:10px}
+.row a.v:hover{color:var(--gold)}
+.copy{all:unset;cursor:pointer;font:500 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:8px 10px;border:1px solid var(--line);border-radius:99px}
+.copy:hover{color:var(--ink);border-color:rgba(241,231,211,.35)}
+.copy.done{color:var(--gold);border-color:var(--gold)}
+.go{color:var(--muted);font:400 18px/1 var(--sans);padding-right:4px}
+
+.work h2,.qrbox h2{margin:0 0 14px;font:400 30px/1 var(--serif)}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{position:relative;display:block;aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--smoke)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:scale .6s ease}
+.tile:hover img{scale:1.04}
+.tile span{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 11px;font:500 10.5px/1.3 var(--mono);letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(transparent,rgba(16,13,14,.85))}
+.more{display:block;margin-top:14px;text-align:center;font:italic 400 19px/1.2 var(--serif);color:var(--gold)}
+
+.qrbox{display:grid;gap:14px}
+.qrtoggle{all:unset;cursor:pointer;display:flex;justify-content:center;align-items:center;gap:10px;min-height:50px;border:1px solid var(--line);border-radius:99px;font:500 14px/1 var(--sans)}
+.qrtoggle:hover{border-color:rgba(241,231,211,.35)}
+.qrcard{background:var(--paper);color:var(--paper-ink);border-radius:10px;padding:26px 22px 20px;display:grid;justify-items:center;gap:14px;text-align:center}
+.qrcard svg{width:min(220px,100%);height:auto}
+.qrcard p{margin:0;font:500 10.5px/1.5 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#77746d}
+.share{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
+.share code{font:400 14px/1 var(--mono);color:var(--ink)}
+
+footer{text-align:center;font:500 10px/1.8 var(--mono);letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+
+[data-lang="ru"] .en,[data-lang="en"] .ru{display:none}
+</style>
+</head>
+<body data-lang="en">
+<main>
+  <div class="top">
+    <span class="label"><span class="en">Creative producer</span><span class="ru">Креативный продюсер</span></span>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="l-en" aria-pressed="true">EN</button>
+      <button type="button" id="l-ru" aria-pressed="false">RU</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="streak" aria-hidden="true"></div>
+    <div class="ring">
+      <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="c" d="M100,100 m-90,0 a90,90 0 1,1 180,0 a90,90 0 1,1 -180,0"/></defs><text font-family="IBM Plex Mono, monospace" font-size="11" fill="#d6a952"><textPath href="#c" textLength="562" lengthAdjust="spacing">PHOTO · FILM · PRODUCTION · DENVER · COLORADO · </textPath></text></svg>
+      <img src="img/marie2.jpg" alt="Marie Perry">
+    </div>
+    <h1>Marie Perry</h1>
+    <div class="studio">STUDIO</div>
+    <p class="motto">Celebrating life and picturing joy.</p>
+    <p class="lead"><span class="en">Photo, film and creative production for families, couples, artists and brands in Denver and beyond.</span><span class="ru">Фото, видео и креативный продакшн для семей, пар, артистов и брендов в Денвере и за его пределами.</span></p>
+  </section>
+
+  <a class="save" href="marie-perry.vcf" download="Marie-Perry.vcf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+    <span class="en">Save contact</span><span class="ru">Сохранить контакт</span>
+  </a>
+
+  <section class="rows" aria-label="Contacts">
+    <div class="row"><span class="label">Phone</span><a class="v" href="tel:+13034374972">303.437.4972</a><button type="button" class="copy" data-copy="+1 303 437 4972"><span class="en">Copy</span><span class="ru">Копировать</span></button></div>
+    <div class="row"><span class="label">Text</span><a class="v" href="sms:+13034374972"><span class="en">Send a message</span><span class="ru">Написать SMS</span></a><span class="go" aria-hidden="true">→</span></div>
+    <div class="row"><span class="label">Mail</span><a class="v" href="mailto:artmaryperry@gmail.com">artmaryperry@gmail.com</a><button type="button" class="copy" data-copy="artmaryperry@gmail.com"><span class="en">Copy</span><span class="ru">Копировать</span></button></div>
+    <div class="row"><span class="label">Insta</span><a class="v" href="https://www.instagram.com/marieperry.studio/" target="_blank" rel="noopener">@marieperry.studio</a><span class="go" aria-hidden="true">↗</span></div>
+    <div class="row"><span class="label">Insta</span><a class="v" href="https://www.instagram.com/marieperry.art/" target="_blank" rel="noopener">@marieperry.art</a><span class="go" aria-hidden="true">↗</span></div>
+    <div class="row"><span class="label">Web</span><a class="v" href="https://marieperry.art/" target="_blank" rel="noopener">marieperry.art</a><span class="go" aria-hidden="true">↗</span></div>
+  </section>
+
+  <section class="work">
+    <h2><span class="en">Selected work</span><span class="ru">Избранное</span></h2>
+    <div class="tiles">
+      <a class="tile" href="https://marieperry.art/#personal" target="_blank" rel="noopener"><img src="img/wedding.jpg" alt="" loading="lazy"><span><span class="en">Weddings</span><span class="ru">Свадьбы</span></span></a>
+      <a class="tile" href="https://marieperry.art/#portraits" target="_blank" rel="noopener"><img src="img/generations.jpg" alt="" loading="lazy"><span><span class="en">Family</span><span class="ru">Семья</span></span></a>
+      <a class="tile" href="https://marieperry.art/#live" target="_blank" rel="noopener"><img src="img/redsinger.jpg" alt="" loading="lazy"><span><span class="en">Music &amp; stage</span><span class="ru">Музыка и сцена</span></span></a>
+      <a class="tile" href="https://marieperry.art/#commercial" target="_blank" rel="noopener"><img src="img/realtor.jpg" alt="" loading="lazy"><span><span class="en">Brands &amp; realtors</span><span class="ru">Бренды и риелторы</span></span></a>
+    </div>
+    <a class="more" href="https://marieperry.art/" target="_blank" rel="noopener"><span class="en">Open the full portfolio</span><span class="ru">Открыть всё портфолио</span></a>
+  </section>
+
+  <section class="qrbox">
+    <button type="button" class="qrtoggle" id="qr-toggle" aria-expanded="false" aria-controls="qr-card">
+      <span class="en">Show QR code</span><span class="ru">Показать QR-код</span>
+    </button>
+    <div class="qrcard" id="qr-card" hidden>
+      <svg role="img" aria-label="QR code for marieperry.art/card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" shape-rendering="crispEdges"><path stroke="#1b1a1c" d="M0 0.5h7m1 0h2m2 0h4m2 0h1m1 0h1m1 0h7M0 1.5h1m5 0h1m2 0h2m1 0h1m2 0h1m1 0h2m3 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h2m1 0h3m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m3 0h1m1 0h1m2 0h4m1 0h1m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m2 0h1m1 0h2m2 0h4m3 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m4 0h2m1 0h2m4 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 7.5h1m3 0h1m4 0h2M0 8.5h1m1 0h1m3 0h2m1 0h2m1 0h2m1 0h2m2 0h1m3 0h1m2 0h1m1 0h1M0 9.5h1m1 0h1m6 0h1m1 0h2m3 0h1m2 0h2m1 0h2m3 0h2M1 10.5h3m1 0h2m2 0h1m3 0h2m1 0h4m2 0h1m1 0h3m1 0h1M0 11.5h1m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m1 0h3m1 0h1m2 0h1m2 0h2M0 12.5h2m2 0h1m1 0h2m1 0h1m3 0h2m4 0h2m1 0h2m4 0h1M5 13.5h1m1 0h2m1 0h1m1 0h3m3 0h6m3 0h2M0 14.5h1m4 0h3m1 0h4m2 0h1m2 0h6m4 0h1M0 15.5h1m1 0h2m1 0h1m1 0h2m2 0h1m1 0h1m5 0h2M0 16.5h1m1 0h5m1 0h4m1 0h1m1 0h2m3 0h1m1 0h1m5 0h1M1 17.5h4m2 0h1m4 0h1m3 0h1m2 0h1m2 0h2m2 0h3M0 18.5h2m1 0h1m2 0h2m2 0h1m1 0h3m1 0h2m1 0h1m2 0h1m1 0h2m2 0h1M3 19.5h2m2 0h2m2 0h1m2 0h3m4 0h1M0 20.5h3m2 0h2m2 0h1m1 0h1m1 0h2m2 0h2m1 0h6m1 0h1M8 21.5h3m2 0h2m2 0h1m1 0h2m3 0h3m1 0h1M0 22.5h7m1 0h1m1 0h3m2 0h1m4 0h1m1 0h1m1 0h1m3 0h1M0 23.5h1m5 0h1m2 0h1m2 0h2m3 0h1m1 0h2m3 0h1m2 0h2M0 24.5h1m1 0h3m1 0h1m2 0h3m1 0h1m1 0h3m1 0h7m1 0h1M0 25.5h1m1 0h3m1 0h1m3 0h1m5 0h1m3 0h2m2 0h4M0 26.5h1m1 0h3m1 0h1m1 0h1m2 0h3m2 0h5m3 0h1m2 0h2M0 27.5h1m5 0h1m2 0h1m1 0h2m2 0h2m1 0h3m2 0h1m1 0h1M0 28.5h7m1 0h1m1 0h1m3 0h1m2 0h2m1 0h2m3 0h1m2 0h1"/></svg>
+
+      <p><span class="en">Point a phone camera here<br>to open this card</span><span class="ru">Наведите камеру телефона,<br>чтобы открыть визитку</span></p>
+    </div>
+    <div class="share">
+      <code>marieperry.art/card</code>
+      <button type="button" class="copy" data-copy="https://marieperry.art/card"><span class="en">Copy link</span><span class="ru">Скопировать ссылку</span></button>
+    </div>
+  </section>
+
+  <footer>Marie Perry Studio · Denver, Colorado</footer>
+</main>
+<script>
+(function(){
+  var body=document.body, en=document.getElementById('l-en'), ru=document.getElementById('l-ru');
+  function setLang(l){body.dataset.lang=l;document.documentElement.lang=l;en.setAttribute('aria-pressed',l==='en');ru.setAttribute('aria-pressed',l==='ru');try{localStorage.setItem('mp-lang',l)}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('mp-lang')}catch(e){}
+  setLang(saved||((navigator.language||'').toLowerCase().indexOf('ru')===0?'ru':'en'));
+  en.onclick=function(){setLang('en')};ru.onclick=function(){setLang('ru')};
+
+  var t=document.getElementById('qr-toggle'), card=document.getElementById('qr-card');
+  t.onclick=function(){var open=card.hidden;card.hidden=!open;t.setAttribute('aria-expanded',open);
+    t.querySelector('.en').textContent=open?'Hide QR code':'Show QR code';
+    t.querySelector('.ru').textContent=open?'Скрыть QR-код':'Показать QR-код';};
+
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.onclick=function(){
+      var text=b.dataset.copy, flash=function(){b.classList.add('done');setTimeout(function(){b.classList.remove('done')},1600)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(flash,function(){fallback(text);flash()})}else{fallback(text);flash()}
+    };
+  });
+  function fallback(text){var a=document.createElement('textarea');a.value=text;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+})();
+</script>
+</body>
+</html>
