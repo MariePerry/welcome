@@ -1,0 +1,14 @@
+{
+  "name": "Marie Perry · Studio",
+  "short_name": "Marie Perry",
+  "description": "Marie Perry's business card: save contact, call, write, see the work.",
+  "start_url": "/card",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1a1617",
+  "theme_color": "#1a1617",
+  "icons": [
+    { "src": "/img/card-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/card-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
