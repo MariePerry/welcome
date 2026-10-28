@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marie Perry · UGC Portfolio</title>
+<meta name="description" content="UGC creator and videographer in Denver, Colorado. Ad-style videos for food, beauty and lifestyle brands, delivered with three hooks to test.">
+<link rel="canonical" href="https://marieperry.art/ugc">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Same studio language as the main site: paper and night rooms, big serif type, gold only as a hairline and an italic accent. */
+:root{
+  --paper:#f4f1ec; --ink:#121214; --muted:#55555a; --line:#dcdcd6; --raised:#ffffff;
+  --gold:#b98a2e; --night:#0f0f11; --night-ink:#efece4; --night-muted:#b3b0a8; --night-line:#2b2a2c;
+  --serif:"Instrument Serif","Times New Roman",Georgia,serif;
+  --sans:"Hanken Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#141416; --ink:#efece4; --muted:#a19f98; --line:#2e2d30; --raised:#1b1b1e; --gold:#d6a952; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#141416; --ink:#efece4; --muted:#a19f98; --line:#2e2d30; --raised:#1b1b1e; --gold:#d6a952; color-scheme:dark}
+
+*{box-sizing:border-box}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.06;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27160%27 height=%27160%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%27.9%27 numOctaves=%272%27 stitchTiles=%27stitch%27/%3E%3CfeColorMatrix type=%27saturate%27 values=%270%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E")}
+body{background:var(--paper);color:var(--ink);font:300 19px/1.65 var(--sans);margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:.98;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1 em,h2 em,h3 em{color:var(--gold)}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.label{font:500 13.5px/1.3 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:.7em;padding:1em 1.6em;font:500 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid currentColor;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn .arr{transition:translate .2s}.btn:hover .arr{translate:4px 0}
+
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.logo{font:400 26px/1 var(--serif);text-decoration:none;letter-spacing:.01em}
+.logo small{font:500 10px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-left:10px;vertical-align:middle}
+.nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font:500 12.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--gold)}
+@media (max-width:820px){.nav ul{display:none}.logo small{display:none}}
+
+section{padding-block:clamp(72px,10vw,140px)}
+.num{font:400 12px/1 var(--mono);letter-spacing:.16em;color:var(--gold);display:block;margin-bottom:18px}
+
+/* 01 intro */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,80px);align-items:end;padding-block:clamp(48px,8vw,110px) clamp(56px,7vw,96px)}
+.hero h1{font-size:clamp(56px,9vw,136px)}
+.hero .lead{margin-top:30px;max-width:32em;color:var(--muted);font-size:clamp(19px,1.7vw,22px)}
+.hero figure{margin:0;position:relative}
+.hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.hero figcaption{margin-top:14px}
+.formula{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:clamp(40px,5vw,64px)}
+.formula div{padding:26px 24px 26px 0;display:grid;gap:12px;min-width:0}
+.formula div+div{border-left:1px solid var(--line);padding-left:24px}
+.formula h3{font-size:clamp(26px,2.4vw,34px)}
+.formula p{color:var(--muted);font-size:18.5px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 34px;margin-top:28px}
+.facts span{font:500 14px/1.6 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.facts span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:10px;vertical-align:1px}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.hero figure{max-width:440px}.formula{grid-template-columns:1fr}.formula div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}}
+
+/* section heads */
+.head{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,80px);align-items:start;margin-bottom:clamp(40px,5vw,72px)}
+.head h2{font-size:clamp(44px,6vw,88px)}
+.head p{color:var(--muted);max-width:34em}
+@media (max-width:820px){.head{grid-template-columns:1fr}}
+
+/* 02 niches */
+.niches{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.6vw,20px)}
+.niche{min-width:0;display:grid;gap:18px;align-content:start}
+.niche img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.niche .txt{display:grid;gap:10px}
+.niche .ph{aspect-ratio:4/5;background:var(--night);display:flex;align-items:flex-end;padding:28px;font:italic 400 clamp(56px,6vw,88px)/.95 var(--serif);color:#d6a952}
+.niche h3{font-size:clamp(34px,3.4vw,48px)}
+.niche p{font-size:18px;color:var(--muted)}
+@media (max-width:860px){.niches{grid-template-columns:1fr}.niche img,.niche .ph{aspect-ratio:4/4.2}}
+
+/* 03 cases (night room) */
+.night{background:var(--night);color:var(--night-ink);color-scheme:dark}
+.night .label,.night .head p{color:var(--night-muted)}
+.night h2 em,.night h3 em{color:#d6a952}
+.night .num{color:#d6a952}
+.night .btn:hover{background:var(--night-ink);color:var(--night)}
+.case-group{margin-top:clamp(48px,6vw,88px)}
+.case-group:first-of-type{margin-top:0}
+.group-head{display:grid;grid-template-columns:auto 1fr;gap:6px 28px;align-items:baseline;border-top:1px solid #d6a952;padding-top:24px;margin-bottom:clamp(16px,2vw,28px)}
+.group-head h3{font-size:clamp(34px,4vw,56px)}
+.group-head p{grid-column:2;color:var(--night-muted);max-width:34em;font-size:18.5px}
+@media (max-width:760px){.group-head{grid-template-columns:1fr}.group-head p{grid-column:1}}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.6vw,20px)}
+.case{margin:0;min-width:0;display:grid;gap:12px;align-content:start}
+.case .media{position:relative;aspect-ratio:3/4;overflow:hidden;background:#1b1b1e}
+.case .media img,.case .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.case .media .tag{position:absolute;left:12px;top:12px;font:500 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;background:#0f0f11;color:#efece4;padding:7px 9px;border:1px solid rgba(239,236,228,.25)}
+.case h4{margin:0;font:400 27px/1.1 var(--serif)}
+.case p{font-size:17px;color:var(--night-muted);line-height:1.55}
+.case.text .media{display:flex;flex-direction:column;justify-content:flex-end;padding:22px;border:1px solid var(--night-line);background:linear-gradient(160deg,#1b1b1e,#0f0f11)}
+.case.text .media b{font:400 clamp(30px,2.6vw,40px)/1 var(--serif);font-weight:400}
+.case.text .media b em{color:#d6a952}
+.case.text .media span{font:500 13px/1.5 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--night-muted);margin-top:14px}
+@media (max-width:760px){.cases{grid-template-columns:repeat(2,1fr)}}
+/* 04 reviews & results */
+.results{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:clamp(48px,6vw,80px)}
+.results div{padding:30px 24px 30px 0;display:grid;gap:10px;min-width:0}
+.results div+div{border-left:1px solid var(--line);padding-left:24px}
+.results b{font:400 clamp(44px,5vw,72px)/1 var(--serif);font-weight:400}
+.results b em{color:var(--gold)}
+.results p{color:var(--muted);font-size:18px}
+@media (max-width:820px){.results{grid-template-columns:1fr}.results div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px)}
+blockquote{margin:0;display:grid;gap:20px;align-content:start;min-width:0}
+blockquote p{font:400 clamp(22px,2vw,27px)/1.25 var(--serif)}
+blockquote cite{font-style:normal}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+.profiles{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:clamp(40px,5vw,64px);font:500 14px/1.6 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.profiles a{text-decoration:none;border-bottom:1px solid var(--gold)}
+
+/* 05 services + contact */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.svc article{padding:clamp(24px,3vw,40px) clamp(0px,2vw,28px) clamp(24px,3vw,40px) 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:6px 22px;min-width:0}
+.svc article:nth-child(odd){border-right:1px solid var(--line)}
+.svc article:nth-child(even){padding-left:clamp(16px,3vw,40px)}
+.svc .k{position:relative;width:13px;height:13px;margin-top:.95em;border:1px solid var(--gold);border-radius:50%}
+.svc .k::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--gold)}
+.svc h3{font-size:clamp(28px,2.8vw,38px)}
+.svc p{grid-column:2;color:var(--muted);max-width:30em}
+@media (max-width:760px){.svc{grid-template-columns:1fr}.svc article:nth-child(odd){border-right:0}.svc article:nth-child(even){padding-left:0}}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(56px,7vw,96px)}
+.process div{border-top:1px solid var(--gold);padding-top:20px;display:grid;gap:10px;min-width:0}
+.process b{font:400 12px/1 var(--mono);letter-spacing:.16em;color:var(--gold)}
+.process h3{font-size:28px}
+.process p{color:var(--muted);font-size:18px}
+@media (max-width:900px){.process{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.process{grid-template-columns:1fr}}
+.contact{border-top:1px solid var(--line)}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:end}
+.contact h2{font-size:clamp(48px,7vw,104px);margin-top:18px}
+.contact .info{display:grid;gap:8px;color:var(--muted)}
+.contact .info a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+.contact .lead{color:var(--muted);max-width:30em;margin-top:24px}
+@media (max-width:820px){.contact .grid{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding-block:28px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media print{
+  header{position:static}
+  body::after{display:none}
+  section,.case,.niche,blockquote{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#intro">Marie Perry<small>UGC · Denver</small></a>
+    <ul>
+      <li><a href="#niches">Niches</a></li>
+      <li><a href="#cases">Cases</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn" href="mailto:artmaryperry@gmail.com?subject=UGC%20project">Book UGC <span class="arr">→</span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- 01 · INTRO: positioning, specifics, result/format -->
+<div class="wrap" id="intro">
+  <div class="hero">
+    <div>
+      <span class="label">UGC portfolio · Issue Nº 02 · Denver · US &amp; Europe</span>
+      <h1 style="margin-top:22px">UGC with a <em>director's</em> eye.</h1>
+      <p class="lead">I'm Marie, a UGC creator for food, beauty and lifestyle brands. Behind me are years of filming weddings, artists and restaurants, so your ads get the feel of a real recommendation and the craft of a full production.</p>
+      <div class="facts">
+        <span>3 hooks per video</span>
+        <span>Ready for Meta &amp; TikTok ads</span>
+        <span>Delivered in 5–7 days</span>
+      </div>
+    </div>
+    <figure>
+      <img src="img/ugc-marie-camera.jpg" alt="Marie Perry sitting barefoot on a studio floor holding a film camera">
+      <figcaption><span class="label">Marie Perry · creator &amp; producer</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="formula">
+    <div>
+      <span class="num">[01] Positioning</span>
+      <h3>For food, beauty <em>&amp;</em> lifestyle brands</h3>
+      <p>Cafés and restaurants, skincare and self-care, home goods and everyday rituals: three neighboring worlds with one warm, natural look.</p>
+    </div>
+    <div>
+      <span class="num">[02] Specifics</span>
+      <h3>Performance-first, <em>ad-style</em> video</h3>
+      <p>Testimonials, unboxings, voiceover with b-roll, ASMR and POV hooks, each one scripted around a single reason to buy.</p>
+    </div>
+    <div>
+      <span class="num">[03] Result</span>
+      <h3>Creative you can <em>test</em> and scale</h3>
+      <p>Vertical 9:16 edits with captions and three opening options, so your team can A/B test paid ads from day one and keep the winner running.</p>
+    </div>
+  </div>
+</div>
+
+<!-- NICHES -->
+<section id="niches" class="wrap" style="padding-top:clamp(56px,7vw,96px)">
+  <div class="head">
+    <div><span class="num">My niches</span><h2>Three worlds, <em>one</em> look.</h2></div>
+    <p>I stay in neighboring niches on purpose. A brand sees work that already fits its shelf, and I know which shots make each product easy to want.</p>
+  </div>
+  <div class="niches">
+    <article class="niche">
+      <img src="img/ugc-cafe-arch.jpg" alt="Bright café seen through an arched doorway, with plants on both sides">
+      <div class="txt">
+        <span class="label">01 · Food &amp; drink</span>
+        <h3>Cafés, restaurants <em>&amp;</em> snacks</h3>
+        <p>Menu guides, pour and crunch ASMR, "what to order" POVs that bring people through the door.</p>
+      </div>
+    </article>
+    <article class="niche">
+      <img src="img/ugc-marie-street.jpg" alt="Marie Perry taking a selfie on a city street, wearing green shimmer eyeshadow">
+      <div class="txt">
+        <span class="label">02 · Beauty &amp; self-care</span>
+        <h3>Skincare, makeup <em>&amp;</em> rituals</h3>
+        <p>Texture close-ups, honest testimonials and get-ready-with-me edits lit like a campaign.</p>
+      </div>
+    </article>
+    <article class="niche">
+      <img src="img/ugc-shelf.jpg" alt="Circular wooden bookshelf framing a bookstore">
+      <div class="txt">
+        <span class="label">03 · Home &amp; lifestyle</span>
+        <h3>Home goods <em>&amp;</em> daily routines</h3>
+        <p>Morning routines, unboxings and styled demos that show the product living in a real day.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 02 · CASES -->
+<section id="cases" class="night">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="num">[02] Cases</span><h2>Work that <em>sells</em> the feeling.</h2></div>
+      <p>Six pieces per niche, each in a different format, so you can see range rather than one unboxing shot from one angle.</p>
+    </div>
+
+    <div class="case-group">
+      <div class="group-head"><span class="label">01</span><h3>Food <em>&amp;</em> drink</h3><p>Content that makes a menu feel like a plan for tonight.</p></div>
+      <div class="cases">
+        <figure class="case">
+          <div class="media"><img src="img/ugc-cake.jpg" alt="A hand holding a berry cake in a clear to-go box"><span class="tag">Hero · Hand-held</span></div>
+          <h4>Dessert to go</h4>
+          <p>One hand, one box, real daylight: the treat looks exactly as it will at pickup.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-aperol.jpg" alt="Three Aperol spritzes with a charcuterie plate on a sunny terrace"><span class="tag">Aperitivo · 20 sec</span></div>
+          <h4>Golden hour spritz</h4>
+          <p>Clinking glasses and a full board that sell the terrace before anyone books.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-wine.jpg" alt="Wine bottles stacked in a glass cellar rack"><span class="tag">Detail · Cellar</span></div>
+          <h4>The wine list</h4>
+          <p>Label close-ups that turn a cellar into a reason to stay for one more glass.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-cafe.jpg" alt="Café with round wooden tables, plants and tall windows"><span class="tag">Walkthrough</span></div>
+          <h4>Café tour</h4>
+          <p>A calm walk through the room that answers "what's it like inside?" in advance.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-lights.jpg" alt="Colorful bunting and string lights glowing at night"><span class="tag">Night · Mood</span></div>
+          <h4>After dark</h4>
+          <p>Evening atmosphere for patios, bars and summer events.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-istanbul.jpg" alt="Ornate stone facade of a restaurant with warm lit windows"><span class="tag">Exterior · Storefront</span></div>
+          <h4>Find us</h4>
+          <p>A storefront hook so new guests recognize the place the moment they arrive.</p>
+        </figure>
+      </div>
+    </div>
+
+    <div class="case-group">
+      <div class="group-head"><span class="label">02</span><h3>Beauty <em>&amp;</em> self-care</h3><p>Me on camera, natural light, skin that looks like skin.</p></div>
+      <div class="cases">
+        <figure class="case">
+          <div class="media"><img src="img/ugc-marie-pillow.jpg" alt="Marie Perry with bare, freckled skin resting on a pillow"><span class="tag">Testimonial · 40 sec</span></div>
+          <h4>The one moisturizer</h4>
+          <p>Bare skin, a single clear reason to buy and a save-worthy ending.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-marie-mirror.jpg" alt="Marie Perry taking a mirror selfie in a green bedroom"><span class="tag">GRWM · 30 sec</span></div>
+          <h4>Get ready with me</h4>
+          <p>A real routine where the product does the work, step by step.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-sink.jpg" alt="Green-tiled vanity with an oval backlit mirror and a round sink"><span class="tag">Ritual · Shelfie</span></div>
+          <h4>Evening ritual</h4>
+          <p>A vanity set for skincare: warm light, cool tile, slow hands.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-spa.jpg" alt="Indoor spa pool with green water and lounge chairs"><span class="tag">Wellness · Spa</span></div>
+          <h4>Spa day</h4>
+          <p>Wellness and body care placed where they belong, by the water.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-marie-rooftop.jpg" alt="Marie Perry smiling on a sunlit rooftop above a city street"><span class="tag">Daylight · Finish</span></div>
+          <h4>Honest finish</h4>
+          <p>Open daylight on the face, so a glow or a foundation reads true.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-marie-lens.jpg" alt="Marie Perry taking a selfie by the sea, holding a Sony camera"><span class="tag">Outdoors · SPF</span></div>
+          <h4>SPF check-in</h4>
+          <p>Wind, sea air and a smile: protection tested far from the bathroom.</p>
+        </figure>
+      </div>
+    </div>
+
+    <div class="case-group">
+      <div class="group-head"><span class="label">03</span><h3>Home <em>&amp;</em> lifestyle</h3><p>Products placed inside a day people want to live.</p></div>
+      <div class="cases">
+        <figure class="case">
+          <div class="media"><img src="img/ugc-kitchenette.jpg" alt="Black marble kitchenette with wood cabinets and a set dining table"><span class="tag">Space · Kitchen</span></div>
+          <h4>Kitchen reveal</h4>
+          <p>Cookware, glassware and gadgets shown in a kitchen worth copying.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-hotel-bed.jpg" alt="White bed beside a tall window with sheer curtains"><span class="tag">Bedroom · Linen</span></div>
+          <h4>Slow morning</h4>
+          <p>Bedding, candles and robes in the soft light of a lazy start.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-hotel-table.jpg" alt="Small café table with a kettle and cups by a brick wall"><span class="tag">Stay · Hotel</span></div>
+          <h4>Room with a kettle</h4>
+          <p>Hotel and rental stays framed as the trip people are already planning.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-book.jpg" alt="A Bridgerton novel lying on fresh green grass"><span class="tag">Flat lay · Location</span></div>
+          <h4>Reading ritual</h4>
+          <p>Books and small goods styled on location instead of a backdrop.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-marie-lake.jpg" alt="Marie Perry in a felt hat by a mountain lake"><span class="tag">Travel · Outdoors</span></div>
+          <h4>Weekend escape</h4>
+          <p>Gear, bags and outfits shown where they're meant to go: outside.</p>
+        </figure>
+        <figure class="case">
+          <div class="media"><img src="img/ugc-bosphorus.jpg" alt="Turkish flag waving over the Bosphorus with a ferry and skyline"><span class="tag">City · POV</span></div>
+          <h4>On the water</h4>
+          <p>A first-person journey where the product rides along across the city.</p>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 03 · REVIEWS & RESULTS -->
+<section id="reviews" class="wrap">
+  <div class="head">
+    <div><span class="num">[03] Reviews &amp; results</span><h2>People relax <em>on camera</em> with me.</h2></div>
+    <p>That matters in UGC: when talent feels at ease, viewers believe them. Here is what clients say about being directed, plus what every brand receives.</p>
+  </div>
+
+  <div class="results">
+    <div><b>3 <em>hooks</em></b><p>Opening variations in every delivery, ready for A/B tests.</p></div>
+    <div><b>1 <em>shoot</em></b><p>Photo and video captured on the same day, so stills for ads come along.</p></div>
+    <div><b>24 <em>hours</em></b><p>Reply time with ideas and a quote after your first message.</p></div>
+  </div>
+
+  <!-- Add brand reviews, screenshots of your videos on brand pages and view counts here as they come in. -->
+  <div class="quotes">
+    <blockquote><p>“I remember walking home after the shoot and telling my sister I felt so inspired, so energized and so full from the process itself that the photos almost didn't matter anymore.”</p><cite class="label">Victoria</cite></blockquote>
+    <blockquote><p>“Her deck of pose ideas kept the flow of our session on point, and we shared more laughs in one evening than we'll quickly forget.”</p><cite class="label">Katerina A.</cite></blockquote>
+    <blockquote><p>“I usually hate taking photos because I feel so awkward. She guides you the whole way and makes you laugh the entire time.”</p><cite class="label">V., Denver</cite></blockquote>
+  </div>
+
+  <div class="profiles">
+    <span class="label" style="align-self:center">Verified profiles</span>
+    <a href="https://www.behance.net/marieperry" target="_blank" rel="noopener">Behance</a>
+    <a href="https://weva.pro/en/videographer/marieperry" target="_blank" rel="noopener">WeVa</a>
+    <a href="https://mywed.com/en/photographer/maryperry/" target="_blank" rel="noopener">MyWed</a>
+    <a href="https://www.youtube.com/channel/UCv3rNFTF4Hu-p8g6WISTQQg" target="_blank" rel="noopener">YouTube</a>
+  </div>
+</section>
+
+<!-- 04 · SERVICES + CONTACTS -->
+<section id="services" class="wrap" style="padding-top:0">
+  <div class="head">
+    <div><span class="num">Services</span><h2>What you can <em>order</em>.</h2></div>
+    <p>Rates depend on length, number of videos and how you plan to use them. Send your brief, and I'll reply with concepts and a quote.</p>
+  </div>
+  <div class="svc">
+    <article><span class="k"></span><h3>UGC video</h3><p>Up to 45 seconds, scripted, filmed and edited with captions. Three hooks included.</p></article>
+    <article><span class="k"></span><h3>Video bundles</h3><p>Three or five videos across formats for a full testing round, at a bundle rate.</p></article>
+    <article><span class="k"></span><h3>Paid-ad usage rights</h3><p>Licensing for Meta, TikTok and whitelisting, priced by term: 30, 90 days or longer.</p></article>
+    <article><span class="k"></span><h3>Raw footage &amp; stills</h3><p>All usable clips for your editors, plus photos from the same shoot.</p></article>
+  </div>
+  <div class="process">
+    <div><b>01</b><h3>Brief</h3><p>Your product, audience, goal and where the video will run.</p></div>
+    <div><b>02</b><h3>Concepts</h3><p>Hooks and a short script for you to approve.</p></div>
+    <div><b>03</b><h3>Filming</h3><p>Shot, edited and delivered within 5–7 days.</p></div>
+    <div><b>04</b><h3>Revision</h3><p>One round of edits included, then final files.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap grid">
+    <div>
+      <span class="num">[04] Contacts</span>
+      <h2>Let's work <em>together.</em></h2>
+      <p class="lead">Tell me about your product, and you'll have ideas and rates within 24 hours.</p>
+    </div>
+    <div class="info">
+      <a href="mailto:artmaryperry@gmail.com?subject=UGC%20project">artmaryperry@gmail.com</a>
+      <a href="tel:+17203205977">+1 720 320 5977</a>
+      <a href="https://www.instagram.com/marieperry.pro/" target="_blank" rel="noopener">@marieperry.pro</a>
+      <span>Based in Denver · working across the US &amp; Europe</span>
+      <div style="margin-top:22px"><a class="btn" style="border-bottom:1px solid currentColor" href="mailto:artmaryperry@gmail.com?subject=UGC%20project">Send a brief <span class="arr">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label">© 2026 Marie Perry Studio · Denver, Colorado</span>
+    <a class="label" href="index.html" style="text-decoration:none">marieperry.art ↗</a>
+  </div>
+</footer>
+
+</body>
+</html>
