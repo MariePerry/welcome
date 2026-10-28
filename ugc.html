@@ -78,9 +78,10 @@ section{padding-block:clamp(72px,10vw,140px)}
 .niche{min-width:0;display:grid;gap:18px;align-content:start}
 .niche img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
 .niche .txt{display:grid;gap:10px}
+.niche .ph{aspect-ratio:4/5;background:var(--night);display:flex;align-items:flex-end;padding:28px;font:italic 400 clamp(56px,6vw,88px)/.95 var(--serif);color:#d6a952}
 .niche h3{font-size:clamp(34px,3.4vw,48px)}
 .niche p{font-size:18px;color:var(--muted)}
-@media (max-width:860px){.niches{grid-template-columns:1fr}.niche img{aspect-ratio:4/4.2}}
+@media (max-width:860px){.niches{grid-template-columns:1fr}.niche img,.niche .ph{aspect-ratio:4/4.2}}
 
 /* 03 cases (night room) */
 .night{background:var(--night);color:var(--night-ink);color-scheme:dark}
@@ -106,11 +107,6 @@ section{padding-block:clamp(72px,10vw,140px)}
 .case.text .media b em{color:#d6a952}
 .case.text .media span{font:500 13px/1.5 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--night-muted);margin-top:14px}
 @media (max-width:980px){.cases{grid-template-columns:repeat(2,1fr)}}
-.films{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.6vw,20px)}
-.films a{display:grid;gap:10px;text-decoration:none}
-.films img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-@media (max-width:760px){.films{grid-template-columns:1fr}}
-
 /* 04 reviews & results */
 .results{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:clamp(48px,6vw,80px)}
 .results div{padding:30px 24px 30px 0;display:grid;gap:10px;min-width:0}
@@ -232,7 +228,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       </div>
     </article>
     <article class="niche">
-      <img src="img/citrus2.jpg" alt="Beauty portrait of a smiling woman in a milk bath with orange slices">
+      <div class="ph"><span>glow,<br>texture,<br>ritual</span></div>
       <div class="txt">
         <span class="label">02 · Beauty &amp; self-care</span>
         <h3>Skincare, makeup <em>&amp;</em> rituals</h3>
@@ -240,7 +236,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       </div>
     </article>
     <article class="niche">
-      <img src="img/redchair.jpg" alt="Woman in a white tee and jeans on a red chair in a bright cafe">
+      <img src="img/interior-lounge.jpg" alt="Bright lounge with a black leather sofa and two yellow armchairs">
       <div class="txt">
         <span class="label">03 · Home &amp; lifestyle</span>
         <h3>Home goods <em>&amp;</em> daily routines</h3>
@@ -285,27 +281,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
 
     <div class="case-group">
-      <div class="group-head"><span class="label">02</span><h3>Beauty <em>&amp;</em> self-care</h3><p>Light, texture and skin that looks like skin.</p></div>
+      <div class="group-head"><span class="label">02</span><h3>Beauty <em>&amp;</em> self-care</h3><p>Spec ads filming now, with me on camera. This is the shot list.</p></div>
       <div class="cases">
-        <figure class="case">
-          <div class="media"><img src="img/citrus2.jpg" alt="Beauty portrait of a smiling woman in a milk bath with orange slices"><span class="tag">Concept · Beauty</span></div>
-          <h4>Citrus milk bath</h4>
-          <p>A vitamin-C story told with color alone: fresh, playful, impossible to scroll past.</p>
-        </figure>
-        <figure class="case">
-          <div class="media"><img src="img/flare.jpg" alt="Woman with a hand on her heart as golden light sweeps through her hair"><span class="tag">Glow · Golden light</span></div>
-          <h4>Golden-hour glow</h4>
-          <p>The kind of warm light that makes a highlighter or serum finish look real.</p>
-        </figure>
-        <figure class="case">
-          <div class="media"><img src="img/amber.jpg" alt="Smiling woman in a teal shirt against an amber wall with leaf shadows"><span class="tag">Natural · Portrait</span></div>
-          <h4>No-filter skin</h4>
-          <p>Natural tones and gentle grading, the look brands need for honest testimonials.</p>
-        </figure>
         <figure class="case text">
-          <div class="media"><span class="tag">Testimonial · 40 sec</span><b>The <em>one</em> moisturizer</b><span>Spec ad · skincare</span></div>
+          <div class="media"><span class="tag">Testimonial · 40 sec</span><b>The <em>one</em> moisturizer</b><span>In production · skincare</span></div>
           <h4>Testimonial to camera</h4>
           <p>One clear reason to buy, texture macros and a save-worthy ending.</p>
+        </figure>
+        <figure class="case text">
+          <div class="media"><span class="tag">Macro · 20 sec</span><b>Texture in <em>60</em> seconds</b><span>In production · serum &amp; cream</span></div>
+          <h4>Texture close-up</h4>
+          <p>Swatch, spread and absorb shots that let the formula speak.</p>
+        </figure>
+        <figure class="case text">
+          <div class="media"><span class="tag">GRWM · 30 sec</span><b>Get ready <em>with</em> me</b><span>In production · makeup</span></div>
+          <h4>Morning routine</h4>
+          <p>A real routine where the product does the work, step by step.</p>
+        </figure>
+        <figure class="case text">
+          <div class="media"><span class="tag">Natural light</span><b>Golden-hour <em>glow</em></b><span>In production · highlighter</span></div>
+          <h4>Honest finish</h4>
+          <p>Warm window light that shows a glow exactly as it looks in person.</p>
         </figure>
       </div>
     </div>
@@ -314,36 +310,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="group-head"><span class="label">03</span><h3>Home <em>&amp;</em> lifestyle</h3><p>Products placed inside a day people want to live.</p></div>
       <div class="cases">
         <figure class="case">
-          <div class="media"><img src="img/sunlit.jpg" alt="Smiling woman in a white shirt by a sunlit window"><span class="tag">Routine · Morning</span></div>
-          <h4>Slow morning</h4>
-          <p>A 30-second routine where coffee, skincare and outfit blend into one easy start.</p>
-        </figure>
-        <figure class="case">
           <div class="media"><img src="img/interior-lounge.jpg" alt="Bright lounge with a black leather sofa and two yellow armchairs"><span class="tag">Space · Décor</span></div>
           <h4>Room reveal</h4>
           <p>Interiors framed so furniture and décor feel inviting, not staged.</p>
         </figure>
-        <figure class="case">
-          <div class="media"><img src="img/studio.jpg" alt="Woman in a white tee and jeans sitting barefoot on a cream studio backdrop"><span class="tag">Clean · Studio</span></div>
-          <h4>Clean studio look</h4>
-          <p>Neutral backdrop for apparel and basics, ready for ads and product pages.</p>
+        <figure class="case text">
+          <div class="media"><span class="tag">Routine · 30 sec</span><b>Slow <em>morning</em></b><span>In production · home</span></div>
+          <h4>Morning ritual</h4>
+          <p>Coffee, skincare and outfit blended into one easy start.</p>
         </figure>
-        <figure class="case">
-          <div class="media"><img src="img/trench.jpg" alt="Woman with freckles holding the collar of a cream trench coat in warm light"><span class="tag">Texture · Detail</span></div>
-          <h4>Touch and texture</h4>
-          <p>Close framing that lets fabric, finish and detail do the convincing.</p>
+        <figure class="case text">
+          <div class="media"><span class="tag">Unboxing · 25 sec</span><b>First <em>open</em></b><span>In production · décor</span></div>
+          <h4>Unboxing</h4>
+          <p>The first reaction, the details up close and an honest verdict.</p>
+        </figure>
+        <figure class="case text">
+          <div class="media"><span class="tag">Demo · 20 sec</span><b>In <em>real</em> use</b><span>In production · kitchen</span></div>
+          <h4>Styled demo</h4>
+          <p>The product solving one small daily problem, shown rather than told.</p>
         </figure>
       </div>
     </div>
 
-    <div class="case-group">
-      <div class="group-head"><span class="label">Film</span><h3>Beyond <em>UGC</em></h3><p>Longer films that show how I direct, shoot and edit.</p></div>
-      <div class="films">
-        <a href="https://www.youtube.com/watch?v=a_zYNKW4nYs" target="_blank" rel="noopener"><img src="img/redsinger.jpg" alt="Singer with an acoustic guitar between red light bars, still from a music video" loading="lazy"><span class="label">Music video ↗</span></a>
-        <a href="https://www.youtube.com/watch?v=wZv9Q97vX60" target="_blank" rel="noopener"><img src="img/stagewide.jpg" alt="Band on an amber-lit stage seen from the balcony, still from a concert film" loading="lazy"><span class="label">Concert film ↗</span></a>
-        <a href="https://www.youtube.com/watch?v=dBgAG6N_s4w" target="_blank" rel="noopener"><img src="img/party.jpg" alt="Bride, groom and guests under a floral arch by a mountain lake, still from an event film" loading="lazy"><span class="label">Event film ↗</span></a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -377,7 +365,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 </section>
 
 <!-- 04 · SERVICES + CONTACTS -->
-<section class="wrap" style="padding-top:0">
+<section id="services" class="wrap" style="padding-top:0">
   <div class="head">
     <div><span class="num">Services</span><h2>What you can <em>order</em>.</h2></div>
     <p>Rates depend on length, number of videos and how you plan to use them. Send your brief, and I'll reply with concepts and a quote.</p>
