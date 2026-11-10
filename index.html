@@ -680,10 +680,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <span class="profiles"><a href="https://mywed.com/en/photographer/maryperry/" target="_blank" rel="noopener">MyWed</a><a href="https://weva.pro/en/videographer/marieperry" target="_blank" rel="noopener">WeVa</a><a href="https://www.behance.net/marieperry" target="_blank" rel="noopener">Behance</a><a href="https://www.youtube.com/channel/UCv3rNFTF4Hu-p8g6WISTQQg" target="_blank" rel="noopener">YouTube</a></span>
         </div>
       </div>
-      <form id="lead" action="https://formsubmit.co/c08f49128a1a5eca00515bc63392b4e0" method="POST">
+      <form id="lead" method="POST" data-k="c08f49128a1a5eca00515bc63392b4e0">
         <input type="hidden" name="_subject" value="New message from marieperry.art">
         <input type="hidden" name="_template" value="table">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_blacklist" value="news129, casino, crypto, bitcoin, viagra, backlinks, seo services, loan offer">
         <div class="seg" role="radiogroup" aria-label="Inquiry type">
           <input type="radio" name="side" id="s-personal" value="personal" checked><label for="s-personal">Personal</label>
           <input type="radio" name="side" id="s-commercial" value="commercial"><label for="s-commercial">Commercial</label>
@@ -711,6 +712,13 @@ let lang='en';
 function fill(k){sel.innerHTML=(lang==='ru'?optsRu:opts)[k].map(o=>'<option>'+o.replace('&','&amp;')+'</option>').join('');}
 document.querySelectorAll('input[name=side]').forEach(r=>r.addEventListener('change',()=>fill(r.value)));
 fill('personal');
+
+// Anti-spam: the form address is only attached after a real visitor has spent a few seconds on the page
+const lead=document.getElementById('lead'),t0=Date.now();
+lead.addEventListener('submit',e=>{
+  if(Date.now()-t0<4000||lead.elements._honey.value){e.preventDefault();return;}
+  lead.action='https://formsubmit.co/'+lead.dataset.k;
+});
 
 const sideOf={personal:'personal',portraits:'personal',faq:'personal',commercial:'commercial',live:'commercial'};
 function route(){
